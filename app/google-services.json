@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "848981699097",
+    "firebase_url": "https://tutor-near-me-eb51c.firebaseio.com",
+    "project_id": "tutor-near-me-eb51c",
+    "storage_bucket": "tutor-near-me-eb51c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848981699097:android:45458838aa7184d9679888",
+        "android_client_info": {
+          "package_name": "com.example.tutornearme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848981699097-uptm10tc5lcpt8879f6imsm6vik79vm8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tutornearme",
+            "certificate_hash": "6c0774ac64bb5f576f764e32b101b7762ce1f060"
+          }
+        },
+        {
+          "client_id": "848981699097-lnpuc39f22admufs5866t0djaksvigc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqKmLHQkqH7RSq8bNUJTIpneGWhTj6AI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848981699097-lnpuc39f22admufs5866t0djaksvigc3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
