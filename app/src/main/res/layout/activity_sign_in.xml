@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1">
+        android:layout_centerInParent="true"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/text_splash_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tutor_near_me"
-            android:textColor="@android:color/white"
+            android:textColor="@color/primary"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_slogan"
-            android:textSize="20sp"/>
+            android:textColor="@color/primary_text"
+            android:textSize="20sp"
+            android:layout_marginBottom="200dp"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_margin="16dp"
-        android:gravity="center|bottom"
-        android:layout_weight="2"
-        android:padding="16dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btn_phone_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_phone"
+            android:drawableStart="@drawable/ic_phone_white_24dp"
             android:padding="16dp"
-            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/sign_in_with_phone"
-            android:drawableStart="@drawable/ic_phone_black_24dp"
-            android:drawableLeft="@drawable/ic_phone_black_24dp"
-            android:textColor="@android:color/black"/>
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btn_google_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:background="@android:color/white"
-            android:text="@string/sign_in_with_phone"
+            android:background="@drawable/button_google"
             android:drawableStart="@drawable/googleg_standard_color_18"
-            android:drawableLeft="@drawable/googleg_standard_color_18"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="16dp"/>
+            android:padding="16dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/sign_in_with_google"
+            android:textColor="@color/primary_text" />
 
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
