@@ -33,7 +33,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -53,4 +53,14 @@ dependencies {
     // Butterknife
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    //Dexter
+    implementation 'com.karumi:dexter:6.1.2'
+
+    //Location
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // Geofire
+    implementation 'com.firebase:geofire-android:3.0.0'
 }

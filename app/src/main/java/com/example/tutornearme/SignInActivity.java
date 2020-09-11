@@ -6,10 +6,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -30,7 +28,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -103,7 +100,10 @@ public class SignInActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists()){
-                        Toast.makeText(SignInActivity.this,"There is already an existing account with this user" ,Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(SignInActivity.this,"There is already an existing account with this user" ,Toast.LENGTH_SHORT).show();
+                        TutorInfoModel tutorInfoModel = snapshot.getValue(TutorInfoModel.class);
+                        goToTutorHomeActivity(tutorInfoModel);
+
                     }else{
                         showRegisterLayout();
                     }
@@ -117,9 +117,15 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
+    private void goToTutorHomeActivity(TutorInfoModel tutorInfoModel) {
+        CommonClass.currentUser = tutorInfoModel;
+        startActivity(new Intent(SignInActivity.this, TutorHomeActivity.class));
+        finish();
+
+    }
+
     private void showRegisterLayout() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.DialogTheme);
-        //View itemView = LayoutInflater.from(this).inflate(R.layout.layout_register, null);
         View itemView = View.inflate(this, R.layout.layout_register, null);
 
         TextInputEditText edt_first_name = itemView.findViewById(R.id.edt_first_name);
@@ -168,6 +174,7 @@ public class SignInActivity extends AppCompatActivity {
                         .addOnSuccessListener(aVoid -> {
                             Toast.makeText(SignInActivity.this, "Registered Successfully!", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
+                            goToTutorHomeActivity(model);
                         });
             }
         });
