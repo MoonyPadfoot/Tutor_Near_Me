@@ -9,7 +9,7 @@ public class CommonClass {
 
     public static String buildWelcomeMessage(){
         if (currentUser != null){
-            return new StringBuilder("Welcome: ")
+            return new StringBuilder()
                     .append(CommonClass.currentUser.getFirstName())
                     .append(" ")
                     .append(CommonClass.currentUser.getLastName()).toString();
